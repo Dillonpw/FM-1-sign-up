@@ -1,0 +1,145 @@
+html {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 6em;
+    width: 25vw;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-box-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(62, 84, 163);
+    color: white;
+    padding: 1em 4em 1em 4em;
+    margin-bottom: 14px;
+    width: 33em;
+    height: 20px;
+    border-radius: 0.5rem;
+    font-size: 11px;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.myForm {
+    background-color: white;
+    height: 20em;
+    width: 24em;
+    padding: 2em;
+    border-radius: 0.5rem;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    border-radius: 0.25rem;
+    height: 2.5em;
+    padding-left: 2rem;
+    border: solid 1px grey;
+}
+
+input:focus {
+    border: solid 2px rgb(83, 81, 81);
+    outline: none;
+}
+
+.sign-up {
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    padding: 1em 4em;
+    border: none;
+    border-radius: 0.5rem;
+}
+.sign-up:hover {
+    background-color: hsl(154, 73%, 36%);
+}
+.terms {
+    font-size: 10px;
+    text-align: center;
+}
+.terms > a {
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100%;
+        flex-direction: column;
+    }
+    .left-box {
+        margin: 10px 4px 6px 4px;
+        padding-bottom: 2em;
+        width: 60vw;
+        text-align: center;
+    }
+    .right-box {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        width: 80%;
+        flex-direction: column;
+    }
+    .left-box {
+        margin: 10px 4px 6px 4px;
+        padding-bottom: 2em;
+        width: 60vw;
+        text-align: center;
+    }
+    .right-box {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
