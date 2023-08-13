@@ -1,4 +1,3 @@
-//this was is ai asissted, not functioning properly at this point.//
 function validateForm() {
     const fname = document.getElementById('fname');
     const lname = document.getElementById('lname');
