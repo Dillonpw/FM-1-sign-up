@@ -19,7 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        
+
         <title>Frontend Mentor | Intro component with sign up form</title>
 
         <style>
@@ -48,7 +48,7 @@
                 <div class="right-box-top">
                     <b>Try it free 7 days </b> then $20/mo. thereafter
                 </div>
-                <form class="myForm">
+                <form class="myForm" novalidate>
                     <input
                         id="fname"
                         type="text"
@@ -81,9 +81,9 @@
                     <button
                         type="submit"
                         id="submitButton"
-                        onclick="validateForm()"
+                        onclick="submitForm()"
                         class="sign-up"
-                        disabled
+                    
                     >
                         <b>CLAIM YOUR FREE TRIAL</b>
                     </button>
