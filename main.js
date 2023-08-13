@@ -39,7 +39,7 @@ const myForm = document.querySelector('.myForm');
 myForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-validateForm();
+    validateForm();
 
     const fname = document.getElementById('fname').value;
     const lname = document.getElementById('lname').value;
