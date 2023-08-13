@@ -5,23 +5,23 @@ function validateForm() {
     const emailInput = document.getElementById('email');
     const signPass = document.getElementById('password');
 
-    const fnameError = document.getElementById('nameError');
-    const lnameError = document.getElementById('nameError');
+    const fnameError = document.getElementById('fnameError');
+    const lnameError = document.getElementById('lnameError');
     const emailError = document.getElementById('emailError');
-    const ageError = document.getElementById('passwordError');
+    const passwordError = document.getElementById('passwordError');
 
     const isfNameValid = fname.value.trim() !== '';
     const islNameValid = lname.value.trim() !== '';
     const isEmailValid = emailInput.value.trim() !== '';
-    const isAgeValid = signPass.value.trim() !== '';
+    const isPasswordValid = signPass.value.trim() !== '';
 
-    fnameError.textContent = isfNameValid ? '' : 'Name is required.';
-    lnameError.textContent = islNameValid ? '' : 'Name is required.';
+    fnameError.textContent = isfNameValid ? '' : 'First name is required.';
+    lnameError.textContent = islNameValid ? '' : 'Last name is required.';
     emailError.textContent = isEmailValid ? '' : 'Email is required.';
-    ageError.textContent = isAgeValid ? '' : 'Age is required.';
+    passwordError.textContent = isPasswordValid ? '' : 'Password is required.';
 
     const isFormValid =
-        isfNameValid && islNameValid && isEmailValid && isAgeValid;
+        isfNameValid && islNameValid && isEmailValid && isPasswordValid;
 
     const submitButton = document.getElementById('submitButton');
     submitButton.disabled = !isFormValid;
@@ -31,17 +31,19 @@ function validateForm() {
     }
 }
 
-const formInputs = document.querySelectorAll('#myForm input');
+const formInputs = document.querySelectorAll('.myForm input');
 formInputs.forEach((input) => {
     input.addEventListener('input', validateForm);
 });
 
-const myForm = document.getElementById('myForm');
+const myForm = document.querySelector('.myForm');
 myForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const fname = document.getElementById('name').value;
-    const lname = document.getElementById('name').value;
+validateForm();
+
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
     const email = document.getElementById('email').value;
 
     let message = `Name: ${fname} ${lname} \nEmail: ${email}\n is this correct?`;
